@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6AABC8B81F4E245200306C79 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AABC8B71F4E245200306C79 /* main.cpp */; };
+		6AABC8C01F4E248300306C79 /* Cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AABC8BF1F4E248300306C79 /* Cube.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		6AABC8B41F4E245200306C79 /* rubiks-cube */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "rubiks-cube"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AABC8B71F4E245200306C79 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6AABC8BE1F4E247000306C79 /* Cube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cube.h; sourceTree = "<group>"; };
+		6AABC8BF1F4E248300306C79 /* Cube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cube.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				6AABC8B71F4E245200306C79 /* main.cpp */,
+				6AABC8BE1F4E247000306C79 /* Cube.h */,
+				6AABC8BF1F4E248300306C79 /* Cube.cpp */,
 			);
 			path = "rubiks-cube";
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AABC8C01F4E248300306C79 /* Cube.cpp in Sources */,
 				6AABC8B81F4E245200306C79 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
