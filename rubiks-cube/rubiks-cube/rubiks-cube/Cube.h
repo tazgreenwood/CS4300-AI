@@ -14,14 +14,22 @@ class Cube
 {
 public:
     Cube();
-    void getName();
     void getValues();
+    bool isEqual();
+    void readSecondCube(std::string value);
     void addTile(std::string value);
     void rotate(std::string color, std::string direction);
+    void rotateRed();
+    void rotateGreen();
+    void rotateWhite();
+    void rotateYellow();
+    void rotateBlue();
+    void rotateOrange();
     
 private:
-    char mName;
     std::vector<std::string> mCube;
+    std::vector<std::string> mTempCube;
+    int mTempLength;
     
 };
 

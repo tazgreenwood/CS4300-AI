@@ -13,6 +13,7 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     
     bool initialFlag = false;
+    bool secondFlag = false;
 
     Cube block;
     string input;
@@ -41,9 +42,19 @@ int main(int argc, const char * argv[]) {
             block.addTile(input);
         }
         
+        if (secondFlag)
+        {
+            block.readSecondCube(input);
+        }
+        
         if (input == "show")
         {
             block.getValues();
+        }
+        
+        if (input == "isequal")
+        {
+            secondFlag = true;
         }
  
         
