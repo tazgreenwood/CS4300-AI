@@ -37,15 +37,36 @@ void Cube::getValues()
     {
         if (i % 3 == 0)
         {
-            cout << mCube[i] << " ";
+            if (DEBUGGING_ON)
+            {
+                cout << mCube[i] << i << " ";
+            }
+            else
+            {
+                cout << mCube[i] << " ";
+            }
         }
         else if (i % 3 == 1)
         {
-            cout << mCube[i] << " ";
+            if (DEBUGGING_ON)
+            {
+                cout << mCube[i] << i << " ";
+            }
+            else
+            {
+                cout << mCube[i] << " ";
+            }
         }
         else if (i % 3 == 2)
         {
-            cout << mCube[i] << endl;
+            if (DEBUGGING_ON)
+            {
+                cout << mCube[i] << i << endl;
+            }
+            else
+            {
+                cout << mCube[i] << endl;
+            }
 
         }
         if (i % 9 == 8)
@@ -102,9 +123,7 @@ void Cube::rotate(string color, string direction)
         }
         else if (direction == "ccw")
         {
-            rotateRed();
-            rotateRed();
-            rotateRed();
+            rotateRedCCW();
         }
     }
 
@@ -117,9 +136,7 @@ void Cube::rotate(string color, string direction)
         }
         else if (direction == "ccw")
         {
-            rotateGreen();
-            rotateGreen();
-            rotateGreen();
+            rotateGreenCCW();
         }
     }
 
@@ -132,9 +149,7 @@ void Cube::rotate(string color, string direction)
         }
         else if (direction == "ccw")
         {
-            rotateWhite();
-            rotateWhite();
-            rotateWhite();
+            rotateWhiteCCW();
         }
     }
 
@@ -147,9 +162,7 @@ void Cube::rotate(string color, string direction)
         }
         else if (direction == "ccw")
         {
-            rotateYellow();
-            rotateYellow();
-            rotateYellow();
+            rotateYellowCCW();
         }
     }
 
@@ -162,9 +175,7 @@ void Cube::rotate(string color, string direction)
         }
         else if (direction == "ccw")
         {
-            rotateBlue();
-            rotateBlue();
-            rotateBlue();
+            rotateBlueCCW();
         }
     }
 
@@ -177,9 +188,7 @@ void Cube::rotate(string color, string direction)
         }
         else if (direction == "ccw")
         {
-            rotateOrange();
-            rotateOrange();
-            rotateOrange();
+            rotateOrangeCCW();
         }
     }
 }
@@ -220,6 +229,46 @@ void Cube::rotateRed() {
     tempCube[25] = mCube[26];
     tempCube[24] = mCube[25];
     tempCube[21] = mCube[24];
+
+    mCube = tempCube;
+}
+
+void Cube::rotateRedCCW() {
+    if (DEBUGGING_ON)
+    {
+        cout << "RUNNING rotateRedCCW()" << endl;
+    }
+    vector<string> tempCube = mCube;
+    // rotate red edges
+    // green to white
+    tempCube[17] = mCube[6];
+    tempCube[14] = mCube[7];
+    tempCube[11] = mCube[8];
+
+    // white to blue
+    tempCube[6] = mCube[27];
+    tempCube[7] = mCube[30];
+    tempCube[8] = mCube[33];
+
+    // blue to yellow
+    tempCube[27] = mCube[47];
+    tempCube[30] = mCube[46];
+    tempCube[33] = mCube[45];
+
+    // yellow to green
+    tempCube[47] = mCube[17];
+    tempCube[46] = mCube[14];
+    tempCube[45] = mCube[11];
+
+    // rotate red face
+    tempCube[21] = mCube[18];
+    tempCube[18] = mCube[19];
+    tempCube[19] = mCube[20];
+    tempCube[20] = mCube[23];
+    tempCube[23] = mCube[26];
+    tempCube[26] = mCube[25];
+    tempCube[25] = mCube[24];
+    tempCube[24] = mCube[21];
 
     mCube = tempCube;
 }
@@ -265,6 +314,47 @@ void Cube::rotateGreen()
     mCube = tempCube;
 }
 
+void Cube::rotateGreenCCW()
+{
+    if (DEBUGGING_ON)
+    {
+        cout << "RUNNING rotateGreenCCW()" << endl;
+    }
+    vector<string> tempCube = mCube;
+    // rotate green edges
+    // white to red
+    tempCube[0] = mCube[18];
+    tempCube[3] = mCube[21];
+    tempCube[6] = mCube[24];
+
+    // red to yellow
+    tempCube[18] = mCube[45];
+    tempCube[21] = mCube[48];
+    tempCube[24] = mCube[51];
+
+    // yellow to orange
+    tempCube[45] = mCube[44];
+    tempCube[48] = mCube[41];
+    tempCube[51] = mCube[38];
+
+    // orange to white
+    tempCube[44] = mCube[0];
+    tempCube[41] = mCube[3];
+    tempCube[38] = mCube[6];
+
+    // rotate green face
+    tempCube[12] = mCube[9];
+    tempCube[9] = mCube[10];
+    tempCube[10] = mCube[11];
+    tempCube[11] = mCube[14];
+    tempCube[14] = mCube[17];
+    tempCube[17] = mCube[16];
+    tempCube[16] = mCube[15];
+    tempCube[15] = mCube[12];
+
+    mCube = tempCube;
+}
+
 void Cube::rotateWhite()
 {
     if (DEBUGGING_ON)
@@ -302,6 +392,47 @@ void Cube::rotateWhite()
     tempCube[7] = mCube[8];
     tempCube[6] = mCube[7];
     tempCube[3] = mCube[6];
+
+    mCube = tempCube;
+}
+
+void Cube::rotateWhiteCCW()
+{
+    if (DEBUGGING_ON)
+    {
+        cout << "RUNNING rotateWhiteCCW()" << endl;
+    }
+    vector<string> tempCube = mCube;
+    // rotate green edges
+    // orange to blue
+    tempCube[36] = mCube[27];
+    tempCube[37] = mCube[28];
+    tempCube[38] = mCube[29];
+
+    // blue to red
+    tempCube[27] = mCube[18];
+    tempCube[28] = mCube[19];
+    tempCube[29] = mCube[20];
+
+    // red to green
+    tempCube[18] = mCube[9];
+    tempCube[19] = mCube[10];
+    tempCube[20] = mCube[11];
+
+    // green to orange
+    tempCube[9] = mCube[36];
+    tempCube[10] = mCube[37];
+    tempCube[11] = mCube[38];
+
+    // rotate white face
+    tempCube[3] = mCube[0];
+    tempCube[0] = mCube[1];
+    tempCube[1] = mCube[2];
+    tempCube[2] = mCube[5];
+    tempCube[5] = mCube[8];
+    tempCube[8] = mCube[7];
+    tempCube[7] = mCube[6];
+    tempCube[6] = mCube[3];
 
     mCube = tempCube;
 }
@@ -347,6 +478,47 @@ void Cube::rotateYellow()
     mCube = tempCube;
 }
 
+void Cube::rotateYellowCCW()
+{
+    if (DEBUGGING_ON)
+    {
+        cout << "RUNNING rotateYellowCCW()" << endl;
+    }
+    vector<string> tempCube = mCube;
+    // rotate green edges
+    // orange to blue
+    tempCube[33] = mCube[42];
+    tempCube[34] = mCube[43];
+    tempCube[35] = mCube[44];
+
+    // blue to red
+    tempCube[24] = mCube[33];
+    tempCube[25] = mCube[34];
+    tempCube[26] = mCube[35];
+
+    // red to green
+    tempCube[15] = mCube[24];
+    tempCube[16] = mCube[25];
+    tempCube[17] = mCube[26];
+
+    // green to orange
+    tempCube[42] = mCube[15];
+    tempCube[43] = mCube[16];
+    tempCube[44] = mCube[17];
+
+    // rotate yellow face
+    tempCube[48] = mCube[45];
+    tempCube[45] = mCube[46];
+    tempCube[46] = mCube[47];
+    tempCube[47] = mCube[50];
+    tempCube[50] = mCube[53];
+    tempCube[53] = mCube[52];
+    tempCube[52] = mCube[51];
+    tempCube[51] = mCube[48];
+
+    mCube = tempCube;
+}
+
 void Cube::rotateBlue()
 {
     if (DEBUGGING_ON)
@@ -388,6 +560,47 @@ void Cube::rotateBlue()
     mCube = tempCube;
 }
 
+void Cube::rotateBlueCCW()
+{
+    if (DEBUGGING_ON)
+    {
+        cout << "RUNNING rotateBlueCCW()" << endl;
+    }
+    vector<string> tempCube = mCube;
+    // rotate green edges
+    // orange to yellow
+    tempCube[42] = mCube[47];
+    tempCube[39] = mCube[50];
+    tempCube[36] = mCube[53];
+
+    // yellow to red
+    tempCube[47] = mCube[20];
+    tempCube[50] = mCube[23];
+    tempCube[53] = mCube[26];
+
+    // red to white
+    tempCube[20] = mCube[2];
+    tempCube[23] = mCube[5];
+    tempCube[26] = mCube[8];
+
+    // white to orange
+    tempCube[8] = mCube[36];
+    tempCube[5] = mCube[39];
+    tempCube[2] = mCube[42];
+
+    // rotate blue face
+    tempCube[30] = mCube[27];
+    tempCube[27] = mCube[28];
+    tempCube[28] = mCube[29];
+    tempCube[29] = mCube[32];
+    tempCube[32] = mCube[35];
+    tempCube[35] = mCube[34];
+    tempCube[34] = mCube[33];
+    tempCube[33] = mCube[30];
+
+    mCube = tempCube;
+}
+
 void Cube::rotateOrange()
 {
     if (DEBUGGING_ON)
@@ -425,6 +638,47 @@ void Cube::rotateOrange()
     tempCube[43] = mCube[44];
     tempCube[42] = mCube[43];
     tempCube[39] = mCube[42];
+
+    mCube = tempCube;
+}
+
+void Cube::rotateOrangeCCW()
+{
+    if (DEBUGGING_ON)
+    {
+        cout << "RUNNING rotateOrangeCCW()" << endl;
+    }
+    vector<string> tempCube = mCube;
+    // rotate orange edges
+    // white to green
+    tempCube[2] = mCube[9];
+    tempCube[1] = mCube[12];
+    tempCube[0] = mCube[15];
+
+    // green to yellow
+    tempCube[9] = mCube[51];
+    tempCube[12] = mCube[52];
+    tempCube[15] = mCube[53];
+
+    // yellow to blue
+    tempCube[51] = mCube[35];
+    tempCube[52] = mCube[32];
+    tempCube[53] = mCube[29];
+
+    // blue to white
+    tempCube[35] = mCube[2];
+    tempCube[32] = mCube[1];
+    tempCube[29] = mCube[0];
+
+    // rotate orange face
+    tempCube[39] = mCube[36];
+    tempCube[36] = mCube[37];
+    tempCube[37] = mCube[38];
+    tempCube[38] = mCube[41];
+    tempCube[41] = mCube[44];
+    tempCube[44] = mCube[43];
+    tempCube[43] = mCube[42];
+    tempCube[42] = mCube[39];
 
     mCube = tempCube;
 }

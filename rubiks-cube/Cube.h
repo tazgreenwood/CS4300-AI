@@ -20,11 +20,17 @@ public:
     void addTile(std::string value);
     void rotate(std::string color, std::string direction);
     void rotateRed();
+    void rotateRedCCW();
     void rotateGreen();
+    void rotateGreenCCW();
     void rotateWhite();
+    void rotateWhiteCCW();
     void rotateYellow();
+    void rotateYellowCCW();
     void rotateBlue();
+    void rotateBlueCCW();
     void rotateOrange();
+    void rotateOrangeCCW();
 
 private:
     std::vector<std::string> mCube;

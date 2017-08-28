@@ -1,97 +1,25 @@
-RUNNING rotateWhite()
-RUNNING rotateBlue()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateBlue()
-RUNNING rotateBlue()
-RUNNING rotateBlue()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateRed()
-RUNNING rotateRed()
-RUNNING rotateRed()
-RUNNING rotateRed()
-RUNNING rotateRed()
-RUNNING rotateRed()
-RUNNING rotateBlue()
-RUNNING rotateBlue()
-RUNNING rotateBlue()
-RUNNING rotateYellow()
-RUNNING rotateBlue()
-RUNNING rotateRed()
-RUNNING rotateRed()
-RUNNING rotateRed()
-RUNNING rotateWhite()
-RUNNING rotateWhite()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateOrange()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateGreen()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateWhite()
-RUNNING rotateOrange()
-RUNNING rotateOrange()
-RUNNING rotateOrange()
-RUNNING rotateWhite()
-RUNNING rotateWhite()
-RUNNING rotateWhite()
-RUNNING rotateRed()
-RUNNING rotateRed()
-RUNNING rotateRed()
-RUNNING rotateWhite()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateGreen()
-RUNNING rotateRed()
-RUNNING rotateWhite()
-RUNNING rotateWhite()
-RUNNING rotateWhite()
-RUNNING rotateYellow()
-RUNNING rotateBlue()
-RUNNING rotateBlue()
-RUNNING rotateWhite()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateYellow()
-RUNNING rotateRed()
-RUNNING rotateWhite()
-RUNNING GETVALUES
-orange yellow blue
-blue white white
-green blue green
+green green green
+white white white
+white white white
 
-yellow orange red
-blue green white
-orange blue orange
+yellow green green
+yellow green green
+yellow green green
 
-red yellow red
-green red green
-green orange blue
+red red red
+red red red
+red red red
 
-yellow red blue
-white blue red
-yellow green orange
+blue blue white
+blue blue white
+blue blue white
 
-blue green orange
-yellow orange white
-red yellow white
+orange orange orange
+orange orange orange
+orange orange orange
 
-orange white red
-white yellow yellow
-green white red
+yellow yellow yellow
+yellow yellow yellow
+blue blue blue
 
-ALL VALUES OF SECOND CUBE HAVE BEEN READ.
-RUNNING ISEQUAL
-FALSE
+TRUE
