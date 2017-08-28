@@ -5,7 +5,7 @@ SRCS    := $(wildcard *.cpp)
 OBJECTS := $(patsubst %.cpp,%.o,$(SRCS))
 TESTS   := $(wildcard acceptance_tests/test_*.in)
 LDFLAGS :=
-PROGRAM := main
+PROGRAM := rubik_test
 TARGETS := $(PROGRAM)
 
 
